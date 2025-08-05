@@ -23,7 +23,7 @@
       position: relative;
       margin: 0 auto;
       display: table;
-      border: 2px solid #003366; /* চারপাশে পাতলা নীল বর্ডার */
+      border: 2px solid #003366;
     }
     .logos {
       display: flex;
@@ -150,6 +150,7 @@
       <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
     </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadPDF() {
@@ -158,11 +159,11 @@
       btn.style.display = 'none';
 
       const opt = {
-        margin: [80, 0, 0, 0],
+        margin: 0,
         filename: 'id-card.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: { scale: 4 },
-        jsPDF: { unit: 'pt', format: [320, 450], orientation: 'portrait' }
+        jsPDF: { unit: 'mm', format: [90, 140], orientation: 'portrait' }
       };
 
       html2pdf().set(opt).from(element).save().then(() => {
@@ -171,4 +172,4 @@
     }
   </script>
 </body>
-            </html>
+  </html>
