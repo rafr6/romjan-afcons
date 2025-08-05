@@ -23,6 +23,11 @@
       position: relative;
       margin: 0 auto;
       display: table;
+
+      /* নীল রঙের পাতলা বর্ডার */
+      border-top: 3px solid #003366;
+      border-left: 2px solid #003366;
+      border-right: 2px solid #003366;
     }
     .logos {
       display: flex;
@@ -38,8 +43,9 @@
       height: 140px;
       border: 1px solid #ccc;
       margin: 0 auto 10px;
-      background-size: cover;
-      background-position: center;
+      background-size: cover;      /* ensure full cover */
+      background-position: center; /* centered */
+      image-rendering: auto;       /* better scaling */
     }
     h2 {
       margin: 10px 0 5px;
@@ -157,7 +163,7 @@
       btn.style.display = 'none';
 
       const opt = {
-        margin: [80, 0, 0, 0], // top, right, bottom, left margins (pt)
+        margin: [80, 0, 0, 0],
         filename: 'id-card.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: { scale: 4 },
@@ -170,4 +176,4 @@
     }
   </script>
 </body>
-</html>
+            </html>
