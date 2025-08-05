@@ -23,11 +23,7 @@
       position: relative;
       margin: 0 auto;
       display: table;
-
-      /* নীল রঙের পাতলা বর্ডার */
-      border-top: 3px solid #003366;
-      border-left: 2px solid #003366;
-      border-right: 2px solid #003366;
+      border: 2px solid #003366; /* চারপাশে পাতলা নীল বর্ডার */
     }
     .logos {
       display: flex;
@@ -43,9 +39,9 @@
       height: 140px;
       border: 1px solid #ccc;
       margin: 0 auto 10px;
-      background-size: cover;      /* ensure full cover */
-      background-position: center; /* centered */
-      image-rendering: auto;       /* better scaling */
+      background-size: cover;
+      background-position: center;
+      image-rendering: auto;
     }
     h2 {
       margin: 10px 0 5px;
@@ -154,7 +150,6 @@
       <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script>
     function downloadPDF() {
