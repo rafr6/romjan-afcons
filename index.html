@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
-
-<body>
-  
-</body>
-
-</html><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -34,8 +21,8 @@
       padding: 20px;
       text-align: center;
       position: relative;
-      margin: 0 auto;       /* Added for horizontal centering */
-      display: table;       /* Added for better centering */
+      margin: 0 auto;
+      display: table;
     }
     .logos {
       display: flex;
@@ -90,7 +77,7 @@
     .seal {
       position: absolute;
       right: 20px;
-      top: 5px;  /* Adjusted for better position */
+      top: 5px;
       height: 50px;
       opacity: 0.8;
     }
@@ -170,12 +157,11 @@
       btn.style.display = 'none';
 
       const opt = {
-        margin: [60, 0, 60, 0],  // top, right, bottom, left margins in px
+        margin: [80, 0, 0, 0], // top, right, bottom, left margins (pt)
         filename: 'id-card.pdf',
         image: { type: 'jpeg', quality: 1 },
         html2canvas: { scale: 4 },
-        jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        jsPDF: { unit: 'pt', format: [320, 450], orientation: 'portrait' }
       };
 
       html2pdf().set(opt).from(element).save().then(() => {
